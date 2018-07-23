@@ -42,6 +42,17 @@ class MyPlot(object):
 
 if __name__ == '__main__':
     myplot = MyPlot()
-    myplot.internal_plot()
-    myplot.plot1()
-    myplot.sub_plots()
+    while True:
+        x = int(input('Enter number 1,2 or 3 for following plots: \n 1. Regular plot \n 2. Internal Plot \n 3. Sub plots'))  # NOQA
+        if x not in range(1, 4):
+            print('Enter number 1,2 & 3 only')
+        else:
+            if x == 1:
+                myplot.plot1()
+                break
+            elif x == 2:
+                myplot.internal_plot()
+                break
+            elif x == 3:
+                myplot.sub_plots()
+                break
